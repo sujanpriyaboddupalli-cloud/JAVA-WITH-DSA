@@ -1,1 +1,45 @@
+Java Basics for Beginners
+1. What is Java?
 
+Java is a high-level, object-oriented programming language developed by Sun Microsystems (now owned by Oracle Corporation).
+
+Features of Java
+Platform Independent (Write Once, Run Anywhere)
+Object-Oriented
+Secure
+Robust
+Portable
+Multithreaded
+
+Java code runs on the JVM, allowing the same program to work on different operating systems.
+
+2. JDK, JRE, and JVM
+JVM (Java Virtual Machine)
+Executes Java bytecode.
+Converts bytecode into machine code.
+JRE (Java Runtime Environment)
+Contains JVM + libraries needed to run Java programs.
+JDK (Java Development Kit)
+Contains JRE + development tools like compiler.
+Required for writing and developing Java applications.
+Simple Formula
+JDK = JRE + Development Tools
+JRE = JVM + Libraries
+
+3. First Java Program
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+Output
+Hello World
+Explanation
+Keyword	Meaning
+public	Accessible everywhere
+class	Blueprint of an object
+HelloWorld	Class name
+static	Method belongs to class
+void	Returns nothing
+main()	Starting point of program
+System.out.println()	Prints output
