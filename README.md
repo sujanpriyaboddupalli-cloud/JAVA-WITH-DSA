@@ -3,8 +3,8 @@
 Where it is derived?
 control statements
 operators
-atring with methods and function
+string with methods and function
 function
 oops
-multithreadings
+multithreading
 array
