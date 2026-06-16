@@ -1,0 +1,373 @@
+# String and String Methods in Java – Interview Questions with Answers
+
+## 1. What is a String in Java?
+
+**Answer:**
+A String is a sequence of characters represented by the `String` class. It is used to store text data.
+
+---
+
+## 2. Is String a primitive data type?
+
+**Answer:**
+No. String is a class (reference type) in Java.
+
+---
+
+## 3. Why are Strings immutable in Java?
+
+**Answer:**
+For security, thread safety, caching, and memory optimization through the String Pool.
+
+---
+
+## 4. What is the String Pool?
+
+**Answer:**
+A special memory area inside the heap where string literals are stored and reused.
+
+---
+
+## 5. Difference between String and StringBuilder?
+
+| String                 | StringBuilder          |
+| ---------------------- | ---------------------- |
+| Immutable              | Mutable                |
+| Slow for modifications | Fast for modifications |
+| More memory usage      | Less memory usage      |
+
+---
+
+## 6. Difference between StringBuilder and StringBuffer?
+
+| StringBuilder                      | StringBuffer                      |
+| ---------------------------------- | --------------------------------- |
+| Not thread-safe                    | Thread-safe                       |
+| Faster                             | Slower                            |
+| Used in single-thread applications | Used in multi-thread applications |
+
+---
+
+## 7. Difference between == and equals()?
+
+**Answer:**
+
+* `==` compares memory addresses.
+* `equals()` compares actual contents.
+
+---
+
+## 8. What is the output?
+
+```java
+String s1 = "Java";
+String s2 = "Java";
+
+System.out.println(s1 == s2);
+```
+
+**Answer:**
+
+```java
+true
+```
+
+Because both point to the same String Pool object.
+
+---
+
+## 9. What is the output?
+
+```java
+String s1 = new String("Java");
+String s2 = new String("Java");
+
+System.out.println(s1 == s2);
+```
+
+**Answer:**
+
+```java
+false
+```
+
+Different objects are created in heap memory.
+
+---
+
+## 10. What is the output?
+
+```java
+String s1 = new String("Java");
+String s2 = new String("Java");
+
+System.out.println(s1.equals(s2));
+```
+
+**Answer:**
+
+```java
+true
+```
+
+Because contents are equal.
+
+---
+
+## 11. What does length() return?
+
+**Answer:**
+Returns the number of characters in a string.
+
+---
+
+## 12. What is the difference between length and length()?
+
+**Answer:**
+
+* `length` → Arrays
+* `length()` → Strings
+
+Example:
+
+```java
+arr.length
+str.length()
+```
+
+---
+
+## 13. What is charAt()?
+
+**Answer:**
+Returns the character at a specified index.
+
+---
+
+## 14. What happens if charAt() gets an invalid index?
+
+**Answer:**
+Throws `StringIndexOutOfBoundsException`.
+
+---
+
+## 15. What is substring()?
+
+**Answer:**
+Extracts a portion of a string.
+
+---
+
+## 16. What is compareTo()?
+
+**Answer:**
+Compares two strings lexicographically (dictionary order).
+
+Returns:
+
+* 0 → Equal
+* Positive → First string greater
+* Negative → Second string greater
+
+---
+
+## 17. Difference between equals() and compareTo()?
+
+**Answer:**
+
+* `equals()` checks equality.
+* `compareTo()` checks order and equality.
+
+---
+
+## 18. What is concat()?
+
+**Answer:**
+Used to combine two strings.
+
+---
+
+## 19. What does trim() do?
+
+**Answer:**
+Removes leading and trailing spaces.
+
+---
+
+## 20. Difference between trim() and strip()?
+
+**Answer:**
+
+* `trim()` removes basic whitespace.
+* `strip()` (Java 11+) handles Unicode whitespace better.
+
+---
+
+## 21. What is indexOf()?
+
+**Answer:**
+Returns the first occurrence position of a character or substring.
+
+---
+
+## 22. What is lastIndexOf()?
+
+**Answer:**
+Returns the last occurrence position.
+
+---
+
+## 23. What is split()?
+
+**Answer:**
+Divides a string into multiple parts using a delimiter.
+
+---
+
+## 24. What is replace()?
+
+**Answer:**
+Replaces characters or substrings with new values.
+
+---
+
+## 25. Difference between replace() and replaceAll()?
+
+**Answer:**
+
+* `replace()` → Normal replacement.
+* `replaceAll()` → Uses regular expressions.
+
+---
+
+## 26. What is toUpperCase()?
+
+**Answer:**
+Converts all letters to uppercase.
+
+---
+
+## 27. What is toLowerCase()?
+
+**Answer:**
+Converts all letters to lowercase.
+
+---
+
+## 28. What is contains()?
+
+**Answer:**
+Checks whether a string contains a specified sequence of characters.
+
+---
+
+## 29. What is startsWith()?
+
+**Answer:**
+Checks if a string begins with a specific prefix.
+
+---
+
+## 30. What is endsWith()?
+
+**Answer:**
+Checks if a string ends with a specific suffix.
+
+---
+
+## 31. What is isEmpty()?
+
+**Answer:**
+Returns `true` if the string length is 0.
+
+---
+
+## 32. Difference between isEmpty() and isBlank()?
+
+**Answer:**
+
+```java
+"".isEmpty()      → true
+" ".isEmpty()     → false
+
+" ".isBlank()     → true
+```
+
+---
+
+## 33. Can String be inherited?
+
+**Answer:**
+No. String class is declared as `final`.
+
+---
+
+## 34. Why is String class final?
+
+**Answer:**
+To maintain immutability and security.
+
+---
+
+## 35. What is String Interning?
+
+**Answer:**
+Process of storing only one copy of identical string literals in the String Pool.
+
+---
+
+## 36. What is the output?
+
+```java
+String s = "Java";
+s.concat(" Programming");
+
+System.out.println(s);
+```
+
+**Answer:**
+
+```java
+Java
+```
+
+Because Strings are immutable.
+
+---
+
+## 37. What is the output?
+
+```java
+String s = "Java";
+s = s.concat(" Programming");
+
+System.out.println(s);
+```
+
+**Answer:**
+
+```java
+Java Programming
+```
+
+---
+
+## 38. Which is faster: String or StringBuilder?
+
+**Answer:**
+StringBuilder is faster for repeated modifications.
+
+---
+
+## 39. Why should StringBuilder be used in loops?
+
+**Answer:**
+To avoid creating many unnecessary String objects.
+
+---
+
+## 40. Which class is preferred for string manipulation in interviews?
+
+**Answer:**
+`StringBuilder` because it provides better performance than String and StringBuffer in most applications.
+
